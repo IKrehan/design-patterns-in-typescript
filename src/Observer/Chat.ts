@@ -1,4 +1,4 @@
-interface IObservable {
+interface ISubject {
   addObserver(observer: IObserver): void;
   removeObserver(observer: IObserver): void;
   notify(): void;
@@ -18,7 +18,7 @@ interface IMessage {
   message: string;
 }
 
-class Chatroom implements IObservable {
+class Chatroom implements ISubject {
   observersCollection: IObserver[];
   messagesHistory: IMessage[];
 
@@ -52,11 +52,11 @@ class Chatroom implements IObservable {
 }
 
 class Device implements IObserver {
-  observable: IObservable & IChatroom;
+  observable: ISubject & IChatroom;
   user: string;
   messagesHistory: IMessage[];
 
-  constructor(observable: IObservable & IChatroom, user: string) {
+  constructor(observable: ISubject & IChatroom, user: string) {
     this.observable = observable;
     this.messagesHistory = [];
     this.user = user;
