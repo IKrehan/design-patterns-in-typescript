@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "observer": "ts-node src/Observer/Chat.ts",
+    "strategy": "ts-node src/Strategy/Game.ts"
+  },
   "dependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
