@@ -18,7 +18,7 @@ interface IMessage {
   message: string;
 }
 
-class Chatroom implements ISubject {
+class Chatroom implements ISubject, IChatroom {
   observersCollection: IObserver[];
   messagesHistory: IMessage[];
 
