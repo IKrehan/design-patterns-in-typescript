@@ -3,12 +3,12 @@
 Currently I'm studying Design Patterns and implementing examples of them to have a better understanding. This repository is a way for me to share the material i'm creating with anyone that may have interest in it.
 
 
-### Documentation 📚
+## Documentation 📚
 
 A documentation explaining the patterns and the implementation of each example can be found [here](https://www.notion.so/Design-Patterns-c2bdb756a38d44388a990b5367123177).
 
 
-### Executing the examples 💻
+## Executing the examples 💻
 
 Install the dependencies with:
 
@@ -24,9 +24,9 @@ yarn strategy
 ```
 
 
-### Progress Status
+## Progress Status
 
-##### 👷Work in Progress 🚧
+#### 👷Work in Progress 🚧
 
 - Creational Patterns:
 
