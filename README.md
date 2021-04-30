@@ -1,18 +1,12 @@
 # Design Patterns in TypeScript 🛠
 
-Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize to solve a particular design problem in your code.
+Currently I'm studying Design Patterns and implementing examples of them to have a better understanding. This repository is a way for me to share the material i'm creating with anyone that may have interest in it.
 
-## Description 📃
-
-Currently studying Design Patterns and implementing examples of them to have a better understanding. This repository is a way for me to share the material i'm creating with anyone that may have interest in it.
-
-#
 
 ### Documentation 📚
 
 A documentation explaining the patterns and the implementation of each example can be found [here](https://www.notion.so/Design-Patterns-c2bdb756a38d44388a990b5367123177).
 
-#
 
 ### Executing the examples 💻
 
@@ -29,7 +23,6 @@ yarn observer
 yarn strategy
 ```
 
-#
 
 ### Progress Status
 
