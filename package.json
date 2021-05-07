@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "observer": "ts-node src/Observer/Chat.ts",
-    "strategy": "ts-node src/Strategy/Game.ts"
+    "strategy": "ts-node src/Strategy/Game.ts",
+    "decorator": "ts-node src/Decorator/Pizza.ts"
   },
   "dependencies": {
     "ts-node": "^9.1.1",
