@@ -35,20 +35,22 @@ class MagicBehavior implements IWeaponBehavior {
   }
 }
 
-const warriorPattern = new CharacterPattern(new SwordBehavior());
-console.log("[WARRIOR] ", warriorPattern.fight());
+export default () => {
+  const warriorPattern = new CharacterPattern(new SwordBehavior());
+  console.log("[WARRIOR] ", warriorPattern.fight());
 
-const knightPattern = new CharacterPattern(new SwordBehavior());
-console.log("[KNIGHT] ", knightPattern.fight());
+  const knightPattern = new CharacterPattern(new SwordBehavior());
+  console.log("[KNIGHT] ", knightPattern.fight());
 
-const archerPattern = new CharacterPattern(new BowBehavior());
-console.log("[ARCHER] ", archerPattern.fight());
+  const archerPattern = new CharacterPattern(new BowBehavior());
+  console.log("[ARCHER] ", archerPattern.fight());
 
-const scoutPattern = new CharacterPattern(new BowBehavior());
-console.log("[SCOUT] ", scoutPattern.fight());
+  const scoutPattern = new CharacterPattern(new BowBehavior());
+  console.log("[SCOUT] ", scoutPattern.fight());
 
-const magePattern = new CharacterPattern(new MagicBehavior());
-console.log("[MAGE] ", magePattern.fight());
+  const magePattern = new CharacterPattern(new MagicBehavior());
+  console.log("[MAGE] ", magePattern.fight());
 
-const witchPattern = new CharacterPattern(new MagicBehavior());
-console.log("[WITCH] ", witchPattern.fight());
+  const witchPattern = new CharacterPattern(new MagicBehavior());
+  console.log("[WITCH] ", witchPattern.fight());
+}

@@ -54,17 +54,19 @@ class Device implements IObserver {
   }
 }
 
-const chatroom = new Chatroom();
-const device1 = new Device(chatroom, "Irvig");
-const device2 = new Device(chatroom, "John");
+export default () => {
+  const chatroom = new Chatroom();
+  const device1 = new Device(chatroom, "Irvig");
+  const device2 = new Device(chatroom, "John");
 
-chatroom.addObserver(device1);
-chatroom.addObserver(device2);
+  chatroom.addObserver(device1);
+  chatroom.addObserver(device2);
 
-device1.send("Hello, how are you?");
-device2.send("Hi, I'm fine. What about you?");
-device1.send("I'm fine as well, thanks for asking!");
+  device1.send("Hello, how are you?");
+  device2.send("Hi, I'm fine. What about you?");
+  device1.send("I'm fine as well, thanks for asking!");
 
-device1.messagesHistory.map((message: IMessage) => (
-  console.log(`[${message.user}]  ${message.message}`)
-));
+  device1.messagesHistory.map((message: IMessage) => (
+    console.log(`[${message.user}]  ${message.message}`)
+  ));
+}
