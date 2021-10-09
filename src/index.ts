@@ -11,10 +11,11 @@ inquirer
 .then((result) => {
   console.log('Running...\n')
   result.pattern()
-}).catch((err: any) => {
+})
+.catch((err: any) => {
   if (err.isTtyError) {
-    // Prompt couldn't be rendered in the current environment
+    console.error("Prompt couldn't be rendered in the current environment")
   } else {
-    // Something else went wrong
+    console.error(err)
   }
 });
