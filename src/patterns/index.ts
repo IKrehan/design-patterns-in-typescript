@@ -1,5 +1,6 @@
 import strategy from "./strategy";
 import observer from "./observer";
+import decorator from "./decorator";
 
 const patterns = [
   {
@@ -9,6 +10,10 @@ const patterns = [
   {
     name: 'Observer',
     value: observer
+  },
+  {
+    name: 'Decorator',
+    value: decorator
   },
 ]
 
