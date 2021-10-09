@@ -1,31 +1,14 @@
-interface ISubject {
-  addObserver(observer: IObserver): void;
-  removeObserver(observer: IObserver): void;
-  notify(): void;
-}
-
-interface IObserver {
-  update(): void;
-}
-
-interface IChatroom {
-  getMessageHistory(): IMessage[];
-  sendMessage(message: IMessage): void;
-}
-
-interface IMessage {
-  user: string;
-  message: string;
-}
+import {ISubject, IObserver, IChatroom, IMessage} from './interfaces'
 
 class Chatroom implements ISubject, IChatroom {
-  observersCollection: IObserver[];
-  messagesHistory: IMessage[];
+  private observersCollection: IObserver[];
+  private messagesHistory: IMessage[];
 
   constructor() {
     this.observersCollection = [];
     this.messagesHistory = [];
   }
+
   addObserver(observer: IObserver): void {
     this.observersCollection.push(observer);
   }
@@ -52,11 +35,11 @@ class Chatroom implements ISubject, IChatroom {
 }
 
 class Device implements IObserver {
-  observable: ISubject & IChatroom;
-  user: string;
   messagesHistory: IMessage[];
 
-  constructor(observable: ISubject & IChatroom, user: string) {
+  constructor(
+    private observable: ISubject & IChatroom, private user: string
+  ) {
     this.observable = observable;
     this.messagesHistory = [];
     this.user = user;
@@ -71,16 +54,19 @@ class Device implements IObserver {
   }
 }
 
-const chatroom = new Chatroom();
-const device1 = new Device(chatroom, "Irvig");
-const device2 = new Device(chatroom, "John");
-chatroom.addObserver(device1);
-chatroom.addObserver(device2);
+export default () => {
+  const chatroom = new Chatroom();
+  const device1 = new Device(chatroom, "Irvig");
+  const device2 = new Device(chatroom, "John");
 
-device1.send("Hello, how are you?");
-device2.send("Hi, I'm fine. What about you?");
-device1.send("I'm fine as well, thanks for asking!");
+  chatroom.addObserver(device1);
+  chatroom.addObserver(device2);
 
-device1.messagesHistory.map((message: IMessage) =>
-  console.log(`[${message.user}]  ${message.message}`)
-);
+  device1.send("Hello, how are you?");
+  device2.send("Hi, I'm fine. What about you?");
+  device1.send("I'm fine as well, thanks for asking!");
+
+  device1.messagesHistory.map((message: IMessage) => (
+    console.log(`[${message.user}]  ${message.message}`)
+  ));
+}
