@@ -16,11 +16,15 @@ Install the dependencies with:
 yarn
 ```
 
-To run the examples you can use one of these scripts, each script will run the example associated with the pattern that names it.
+To run the examples the cli should be used, each option will run the example associated with the pattern that names it.
 
 ```
-yarn observer
-yarn strategy
+yarn start
+
+? Choose one of the following patterns to run. (Use arrow keys)
+❯ Strategy
+  Observer
+  ...
 ```
 
 
