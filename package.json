@@ -4,12 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "observer": "ts-node src/Observer/Chat.ts",
-    "strategy": "ts-node src/Strategy/Game.ts",
-    "decorator": "ts-node src/Decorator/Pizza.ts"
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
+    "inquirer": "^8.2.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3"
   }
 }

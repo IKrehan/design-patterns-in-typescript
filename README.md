@@ -1,20 +1,14 @@
 # Design Patterns in TypeScript 🛠
 
-Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize to solve a particular design problem in your code.
+Currently I'm studying Design Patterns and implementing examples of them to have a better understanding. This repository is a way for me to share the material i'm creating with anyone that may have interest in it.
 
-## Description 📃
 
-Currently studying Design Patterns and implementing examples of them to have a better understanding. This repository is a way for me to share the material i'm creating with anyone that may have interest in it.
-
-#
-
-### Documentation 📚
+## Documentation 📚
 
 A documentation explaining the patterns and the implementation of each example can be found [here](https://www.notion.so/Design-Patterns-c2bdb756a38d44388a990b5367123177).
 
-#
 
-### Executing the examples 💻
+## Executing the examples 💻
 
 Install the dependencies with:
 
@@ -22,18 +16,21 @@ Install the dependencies with:
 yarn
 ```
 
-To run the examples you can use one of these scripts, each script will run the example associated with the pattern that names it.
+To run the examples the cli should be used, each option will run the example associated with the pattern that names it.
 
 ```
-yarn observer
-yarn strategy
+yarn start
+
+? Choose one of the following patterns to run. (Use arrow keys)
+❯ Strategy
+  Observer
+  ...
 ```
 
-#
 
-### Progress Status
+## Progress Status
 
-##### 👷Work in Progress 🚧
+#### 👷Work in Progress 🚧
 
 - Creational Patterns:
 
