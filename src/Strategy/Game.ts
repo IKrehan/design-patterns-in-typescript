@@ -1,13 +1,6 @@
-// Strategy Pattern
-
-interface IWeaponBehavior {
-  useWeapon(): string;
-}
-
+import {IWeaponBehavior} from './interfaces'
 class CharacterPattern {
-  weaponBehavior: IWeaponBehavior;
-
-  constructor(weaponBehavior: IWeaponBehavior) {
+  constructor(private weaponBehavior: IWeaponBehavior) {
     this.weaponBehavior = weaponBehavior;
   }
 
