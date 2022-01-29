@@ -20,7 +20,7 @@ The observer pattern consists in two classes, a Subject (also known as Observabl
 
 Here is an example of how this pattern can be implemented:
 
-![Observer UML](docs/observer-uml.png)
+![Observer UML](/docs/observer-uml.png)
 
 As the ISubject interface shows, a Subject class has 3 methods, they are:
 
