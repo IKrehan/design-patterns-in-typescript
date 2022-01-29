@@ -12,7 +12,7 @@ Strategy Pattern consists in decoupling algorithms from an object, intending the
 
 This pattern is used to solve a common problem caused by inheritance trees: The impossibility of sharing properties horizontally without repeating code.
 
-![Tree](docs/strategy-tree.png)
+![Tree](/docs/strategy-tree.png)
 
 Let's say a parent A has a method X and the son B use the inherited method, but C, D and E implements their own, if two of them implements the same method the code will be repeated, as said previously in inheritance trees there is no way of sharing properties horizontally.
 
@@ -24,13 +24,13 @@ Strategy Pattern exists to solve this kind of brick wall created by inheritance.
 
 The Strategy Pattern use dependencies injections to decouple the algorithms from the class, so instead of running a hard coded behavior, the method will use one injected in the class, usually through the constructor.
 
-![Problem UML](docs/strategy-problem-uml.png)
+![Problem UML](/docs/strategy-problem-uml.png)
 
 Here we have a class Character with some methods, some of the classes that inherited it will have to implement methods to adapt their needs, like the method Weapon.
 
 So, both, the warrior and the Knight, will use Swords and the Archer a Bow. We will use Strategy Pattern to re-utilize the weapon behaviors in future Characters and also simplify implementations of new behaviors.
 
-![Pattern UML](docs/strategy-uml.png)
+![Pattern UML](/docs/strategy-uml.png)
 
 Here we can see how a dependency injection is made, now the method weapon on Character will use the behavior that was injected through an interface, interfaces gives the possibility to create and use as many behaviors as we want. For example, if we want to add a Mage character we just need to implement a weapon behavior "Magic Behavior" and its ready to go, or if another bow user is going to be implemented, we can just re-utilize the existent behavior!
 
