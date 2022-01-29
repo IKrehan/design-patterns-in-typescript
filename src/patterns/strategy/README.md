@@ -1,3 +1,5 @@
+# Strategy Pattern 🗺
+
 ## General Research 📚
 
 **What is it?**
