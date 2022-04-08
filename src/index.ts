@@ -1,5 +1,12 @@
 import inquirer from 'inquirer';
-import patterns from './patterns';
+import {readdirSync} from 'fs';
+
+const patterns = readdirSync('src/patterns')
+  .filter((dir) => !dir.includes('.ts'))
+  .map((dir) => ({
+      name: dir[0].toUpperCase() + dir.slice(1).toLowerCase(),
+      value: require(`./patterns/${dir}`).default,
+  }))
 
 inquirer
 .prompt({
